@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générer le PDF</title>
+    <link rel="stylesheet" href="Interface.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="Img/Inetum.png" alt="logoInetum" class="logoInetum">
+        <br>
+        <br>
+        <h1>Générer le rapport en PDF</h1>
+        <form id="form" onsubmit="getReport()" target="_blank">
+            <label for="id_vehicle">Identifiant du véhicule</label>
+            <input type="text" id="id_vehicle" pattern="\d+" title="L'identifiant devrait être un nombre." placeholder="Entrez l'identifiant" required/>
+            <br>
+            <br>
+            <input type="submit" id="submit" value="Générer le PDF">
+        </form>
+    </div>
+
+    <script>
+        function getReport() {
+            let id_vehicle = document.getElementById("id_vehicle").value;
+            let action_src = "http://localhost:5000/report/" + id_vehicle;
+            let form = document.getElementById('form');
+            form.action = action_src;
+        }
+    </script>
+</body>
+</html>

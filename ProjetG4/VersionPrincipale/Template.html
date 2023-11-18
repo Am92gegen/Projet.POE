@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des incidents du véhicule</title>
+    <link rel="stylesheet" href="Template.css">
+</head>
+
+<body>
+    <div class="first-page">
+        <!-- Contenu de la première page -->
+        <h1 id="title">Liste des incidents du véhicule</h1>
+        <p>Description du véhicule : <strong>[VEHICLE_DESCRIPTION]</strong></p>
+    </div>
+    <div class="table-of-contents page">
+        <h2>Table des matières</h2>
+        <ul>
+            <li><a href="#resume">Résumé</a></li>
+            <li><a href="#listOfIncidents">Liste des incidents et status des incidents</a></li>
+            <li><a href="#detailedList">Liste détaillée des incidents</a></li>
+            [SUMMARY_WORKSTATION]
+        </ul>
+    </div>
+    <div id="resume" class="page">
+        <h2>Résumé</h2>
+        <p>Ce rapport a pour but d'informer sur la liste des incidents des incidents déclarés sur le véhicule <strong>[VEHICLE_DESCRIPTION]</strong>.</p>
+        <p><strong>[TOTAL_INCIDENTS]</strong> incidents ont été trouvés sur le véhicule.</p>
+    </div>
+    <div id="listOfIncidents" class="page">
+        <h2 >Liste des incidents</h2>
+        <p>Le tableau ci-dessous montre la liste des incidents pour le véhicule <strong>[VEHICLE_DESCRIPTION]</strong>.</p>
+        [INCIDENT_LIST] <!-- Placeholder for dynamic data -->
+    </div>
+    <div id="detailedList" class="page">
+        <h2 >Liste détaillée des incidents</h2>
+        <p>Ce chapitre contient la liste des incidents déclarés par poste de travail.</p>
+        [INCIDENTS_BY_POSTE]
+    </div>
+</body>
+</html>
